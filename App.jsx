@@ -10,6 +10,7 @@ import { useState } from "react";
 
 export default function App() {
     const [query, setQuery] = useState("");
+    const [countryRegion, setCountryRegion] = useState("");
   
   return (
     <>
@@ -17,9 +18,9 @@ export default function App() {
       <main>
         <div className="search-filter-container">
           <Search setQuery={setQuery} />
-          <Filter />
+          <Filter setCountryRegion={setCountryRegion} />
         </div>
-        <CountriesCardContainer query={query} />
+        <CountriesCardContainer query={query} countryRegion={countryRegion} />
       </main>
     </>
   );
