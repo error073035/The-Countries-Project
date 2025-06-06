@@ -1,7 +1,6 @@
 import React from "react";
 import CountryCard from "./CountryCard";
 import CountriesData from "./../CountriesData";
-import { useState } from "react";
 // console.log(CountriesData);
 
 export default function CountriesCardContainer({ query }) {
