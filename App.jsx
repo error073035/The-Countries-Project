@@ -1,27 +1,12 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
 import Header from "./components/Header";
-import "./App.css";
-import Search from "./components/Search";
-import Filter from "./components/Filter";
-import CountriesCardContainer from "./components/CountriesCardContainer";
-import { useState } from "react";
-
+import { Outlet } from "react-router";
 
 export default function App() {
-    const [query, setQuery] = useState("");
-    const [countryRegion, setCountryRegion] = useState("");
-  
+
   return (
     <>
       <Header />
-      <main>
-        <div className="search-filter-container">
-          <Search setQuery={setQuery} />
-          <Filter setCountryRegion={setCountryRegion} />
-        </div>
-        <CountriesCardContainer query={query} countryRegion={countryRegion} />
-      </main>
-    </>
+      <Outlet />
+    </>                                                                              
   );
 }

@@ -1,7 +1,5 @@
 import React from "react";
 import CountryCard from "./CountryCard";
-// import CountriesData from "./../CountriesData";
-// console.log(CountriesData);
 
 export default function CountriesCardContainer({ query, countryRegion }) {
   const [countriesData, setCountriesData] = React.useState([]);
@@ -32,7 +30,7 @@ export default function CountriesCardContainer({ query, countryRegion }) {
 
   const CountriesArray = countriesData
     .filter((country) => {
-      return country.name.common.includes(query);
+      return country.name.common.toLowerCase().includes(query.toLowerCase());
     })
     .map((country) => {
       return (

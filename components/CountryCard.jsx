@@ -3,7 +3,7 @@ import React from "react";
 export default function CountryCard({ name, population, region, capital, flags }) {
   // console.log(name);
   return (
-    <a className="country-card" href={`/country.html?name=${name}`}>
+    <a className="country-card" href={`/country?name=${name}`}>
       <img src={flags} alt={`${name} flag`} />
       <div className="card-text">
         <h3 className="card-title">{name}</h3>
