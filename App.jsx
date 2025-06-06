@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import "./App.css";
 import Search from "./components/Search";
 import Filter from "./components/Filter";
-import CountryCard from "./components/countryCard";
+import CountriesCardContainer from "./components/CountriesCardContainer";
 
 export default function App() {
   return (
@@ -12,12 +12,10 @@ export default function App() {
       <Header />
       <main>
         <div className="search-filter-container">
-        <Search />
-        <Filter />
-      </div>
-      <div className="countries-container">
-        <CountryCard />
-      </div>
+          <Search />
+          <Filter />
+        </div>
+        <CountriesCardContainer />
       </main>
     </>
   );

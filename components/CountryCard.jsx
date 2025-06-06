@@ -1,19 +1,20 @@
 import React from "react";
 
-export default function CountryCard() {
+export default function CountryCard({ name, population, region, capital, flags }) {
+  // console.log(name);
   return (
-    <a className="country-card" href="/country.html?name=Guinea-Bissau">
-      <img src="https://flagcdn.com/gw.svg" alt="Guinea-Bissau flag" />
+    <a className="country-card" href={`/country.html?name=${name}`}>
+      <img src={flags} alt={`${name} flag`} />
       <div className="card-text">
-        <h3 className="card-title">Guinea-Bissau</h3>
+        <h3 className="card-title">{name}</h3>
         <p>
-          <b>Population: </b>19,67,998
+          <b>Population: </b>{population}
         </p>
         <p>
-          <b>Region: </b>Africa
+          <b>Region: </b>{region}
         </p>
         <p>
-          <b>Capital: </b>Bissau
+          <b>Capital: </b>{capital}
         </p>
       </div>
     </a>
