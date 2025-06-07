@@ -34,6 +34,7 @@ export default function CountriesCardContainer({ query, countryRegion }) {
     })
     .map((country) => {
       return (
+        countriesData === null ? "Loading..." :(
         <CountryCard
           key={country.name.common}
           name={country.name.common}
@@ -42,7 +43,7 @@ export default function CountriesCardContainer({ query, countryRegion }) {
           capital={country.capital?.[0]}
           flags={country.flags.svg}
         />
-      );
+      ));
     });
   // console.log(CountriesArray);
 
