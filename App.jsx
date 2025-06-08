@@ -1,12 +1,18 @@
-import Header from "./components/Header";
-import { Outlet } from "react-router";
+import Header from './components/Header'
+import { Outlet } from 'react-router-dom'
 
-export default function App() {
+import './App.css'
+import { useState } from 'react'
+
+const App = () => {
+  const [isDark, setIsDark] = useState(JSON.parse(localStorage.getItem('isDarkMode')))
 
   return (
     <>
-      <Header />
-      <Outlet />
-    </>                                                                              
-  );
+      <Header theme={[isDark, setIsDark]} />
+      <Outlet context={[isDark, setIsDark]} />
+    </>
+  )
 }
+
+export default App
