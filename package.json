@@ -16,6 +16,8 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router": "^6.30.1",
-    "react-router-dom": "^6.30.1"
+    "react-router-dom": "^6.30.1",
+    "react-shimmer-effects": "^1.0.4",
+    "shimmer-effects-react": "^1.0.4"
   }
 }
